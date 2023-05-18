@@ -15,15 +15,15 @@ def merge_csv_files():
     file_paths = file_list.get(0, tk.END)
     merged_data = pd.concat([pd.read_csv(file) for file in file_paths])
 
-    # Получаване на пътя до папката "Downloads"
+    # Get the path to the "Downloads" folder
     downloads_folder = os.path.join(os.path.expanduser("~"), "Downloads")
 
-    # Генериране на името на обединения CSV файл с дата и час
+    # Generate the name of the merged CSV file with date and time
     current_datetime = datetime.now().strftime("%Y%m%d_%H%M%S")
     merged_csv_name = f"merged_{current_datetime}.csv"
     merged_csv_path = os.path.join(downloads_folder, merged_csv_name)
 
-    # Запазване на обединения CSV файл
+    # Save the merged CSV file
     merged_data.to_csv(merged_csv_path, index=False)
 
 
