@@ -11,3 +11,7 @@
 When selecting files, they can be selected multiple times.
 
 Once you have selected one or more files, others can be added to them. This can be useful if the others are in a separate directory.
+
+![alt text](merge-csv-files.jpg)
+
+![alt text](merge-csv-files2.jpg)
